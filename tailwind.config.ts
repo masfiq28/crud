@@ -1,3 +1,4 @@
+// import type { Config } from "tailwindcss";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -12,8 +13,21 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      width: {
+        '10': '10%',
+        '30': '30%',
+      },
+      // spacing: {
+      //   '5' : '5px'
+      // }
+      
     },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
+  daisyui: {
+    themes: ["light", "dark", "corporate"],
+  },
 };
 export default config;
